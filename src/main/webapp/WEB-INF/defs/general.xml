@@ -3,11 +3,23 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-  <definition name="common" template="/WEB-INF/layouts/classic.jsp">
-	    <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
-  </definition>
-  <definition name="test" extends="common">
-	    <put-attribute name="title" value="Jave Log Aggregator - Index" />
-	    <put-attribute name="body" value="/WEB-INF/jsp/test.jsp" />
-  </definition>
+	<definition name="common" template="/WEB-INF/layouts/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+		<put-attribute name="myscript" value="/resources/myscript.js"/>
+	</definition>
+	<definition name="test" extends="common">
+		<put-attribute name="title" value="Jave Log Aggregator - Index" />
+		<put-attribute name="body" value="/WEB-INF/jsp/test.jsp" />
+		<put-attribute name="current" value="index"/>
+	</definition>
+	<definition name="all_users" extends="common">
+		<put-attribute name="title" value="Jave Log Aggregator - Users" />
+		<put-attribute name="body" value="/WEB-INF/jsp/all_users.jsp" />
+		<put-attribute name="current" value="all_users"/>
+	</definition>
+	<definition name="register-form" extends="common">
+		<put-attribute name="title" value="Jave Log Aggregator - Register" />
+		<put-attribute name="body" value="/WEB-INF/jsp/register-form.jsp" />
+		<put-attribute name="current" value="register"/>
+	</definition>
 </tiles-definitions>
