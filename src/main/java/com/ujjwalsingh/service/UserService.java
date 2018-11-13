@@ -43,6 +43,10 @@ public class UserService {
 		Users user = userRepository.findOne(id);
 		return user;
 	}
+	public void delete(int id) {
+		//delete a user
+		
+	}
 
 	@PreAuthorize("#user.name == authentication.name")
 	public void testPreAuthorize(@P("user") Users user) {
