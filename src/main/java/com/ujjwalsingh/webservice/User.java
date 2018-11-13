@@ -24,7 +24,7 @@ public class User {
 	
 	@RequestMapping(value="/user-departments",method=RequestMethod.GET)
 	public @ResponseBody ArrayList<Users> getAllUserDepartments() {
-		ArrayList<Users> user = userService.allUsers();
+		ArrayList<Users> user = new ArrayList<>();
 		return user;
 	}
 }
